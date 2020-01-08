@@ -46,7 +46,7 @@
 		00E356F21AD99517003FC87E /* TicTacToeInitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeInitTests.m; sourceTree = "<group>"; };
 		08D1793D1F6ACEAD3BBD43AD /* Pods-TicTacToeInit-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToeInit-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToeInit-tvOSTests/Pods-TicTacToeInit-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1336406E57118BEF359AAB15 /* libPods-TicTacToeInit-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TicTacToeInit-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* TicTacToeInit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToeInit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TicTacToeInit/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TicTacToeInit/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* TicTacToeInit.app */,
+				13B07F961A680F5B00A75B9A /* Tic Tac Toe.app */,
 				00E356EE1AD99517003FC87E /* TicTacToeInitTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* TicTacToeInit-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* TicTacToeInit-tvOSTests.xctest */,
@@ -236,7 +236,7 @@
 			);
 			name = TicTacToeInit;
 			productName = TicTacToeInit;
-			productReference = 13B07F961A680F5B00A75B9A /* TicTacToeInit.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Tic Tac Toe.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* TicTacToeInit-tvOS */ = {
@@ -291,6 +291,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 7TV6LZTA33;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -307,6 +310,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -603,15 +607,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 7TV6LZTA33;
 				INFOPLIST_FILE = TicTacToeInit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = TicTacToeInit;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.handlebarlabs.tictactoe-demo";
+				PRODUCT_NAME = "Tic Tac Toe";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -622,15 +628,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7TV6LZTA33;
 				INFOPLIST_FILE = TicTacToeInit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = TicTacToeInit;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.handlebarlabs.tictactoe-demo";
+				PRODUCT_NAME = "Tic Tac Toe";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
