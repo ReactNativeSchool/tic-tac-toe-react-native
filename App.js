@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,59 +6,59 @@ import {
   TouchableOpacity,
   Dimensions,
   StatusBar,
-  SafeAreaView
-} from "react-native";
+  SafeAreaView,
+} from 'react-native';
 
-const screen = Dimensions.get("window");
+const screen = Dimensions.get('window');
 
 const SQUARE_SIZE = Math.floor(screen.width * 0.3);
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#3ba2bf",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#3ba2bf',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   board: {
     borderWidth: 1,
-    borderColor: "#fff"
+    borderColor: '#fff',
   },
   row: {
-    flexDirection: "row"
+    flexDirection: 'row',
   },
   square: {
     borderWidth: 1,
-    borderColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    borderColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: SQUARE_SIZE,
-    height: SQUARE_SIZE
+    height: SQUARE_SIZE,
   },
   squareText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 40,
-    fontWeight: "bold"
+    fontWeight: 'bold',
   },
   winnerBlock: {
-    marginTop: 50
+    marginTop: 50,
   },
   button: {
     borderRadius: 5,
-    borderColor: "#fff",
+    borderColor: '#fff',
     borderWidth: 1,
-    marginTop: 10
+    marginTop: 10,
   },
   buttonText: {
-    color: "#fff",
+    color: '#fff',
     fontSize: 14,
     paddingHorizontal: 20,
-    paddingVertical: 5
+    paddingVertical: 5,
   },
   text: {
-    color: "#fff",
-    textAlign: "center"
-  }
+    color: '#fff',
+    textAlign: 'center',
+  },
 });
 
 function calculateWinner(squares) {
@@ -70,7 +70,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i += 1) {
     const [a, b, c] = lines[i];
@@ -81,13 +81,13 @@ function calculateWinner(squares) {
   return null;
 }
 
-const Square = ({ onPress, value }) => (
+const Square = ({onPress, value}) => (
   <TouchableOpacity style={styles.square} onPress={onPress}>
     <Text style={styles.squareText}>{value}</Text>
   </TouchableOpacity>
 );
 
-const Board = ({ onSquarePress, squares }) => {
+const Board = ({onSquarePress, squares}) => {
   const renderSquare = i => {
     return <Square value={squares[i]} onPress={() => onSquarePress(i)} />;
   };
@@ -118,7 +118,7 @@ const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   const onSquarePress = i => {
-    const value = xIsNext ? "X" : "O";
+    const value = xIsNext ? 'X' : 'O';
     const newSquares = [...squares];
 
     if (newSquares[i] || calculateWinner(squares)) {
@@ -143,8 +143,7 @@ const App = () => {
           <Text style={styles.text}>{`Winner: ${winner}`}</Text>
           <TouchableOpacity
             onPress={() => setSquares(Array(9).fill(null))}
-            style={styles.button}
-          >
+            style={styles.button}>
             <Text style={styles.buttonText}>New Game</Text>
           </TouchableOpacity>
         </View>
